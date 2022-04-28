@@ -121,7 +121,7 @@ QBCore.Commands.Add("grantlicense", Lang:t("commands.license_grant"), {{name = "
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "police" and Player.PlayerData.job.grade.level >= Config.LicenseRank then
-        if args[2] == "driver" or args[2] == "weapon" then
+        if args[2] == "driver" or args[2] == "weapon" or args[2] == "pilot" then
             local SearchedPlayer = QBCore.Functions.GetPlayer(tonumber(args[1]))
             if not SearchedPlayer then return end
             local licenseTable = SearchedPlayer.PlayerData.metadata["licences"]
@@ -344,7 +344,7 @@ end)
 QBCore.Commands.Add("depot", Lang:t("commands.depot"), {{name = "price", help = Lang:t('info.impound_price')}}, false, function(source, args)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    if Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty then
+    if Player.PlayerData.job.name == "police" or PlayerData.job.name == "mechanic" and Player.PlayerData.job.onduty then
         TriggerClientEvent("police:client:ImpoundVehicle", src, false, tonumber(args[1]))
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
