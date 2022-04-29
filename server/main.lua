@@ -145,7 +145,7 @@ QBCore.Commands.Add("revokelicense", Lang:t("commands.license_revoke"), {{name =
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "police" and Player.PlayerData.job.grade.level >= Config.LicenseRank then
-        if args[2] == "driver" or args[2] == "weapon" then
+        if args[2] == "driver" or args[2] == "weapon" or args[2] == "pilot" then
             local SearchedPlayer = QBCore.Functions.GetPlayer(tonumber(args[1]))
             if not SearchedPlayer then return end
             local licenseTable = SearchedPlayer.PlayerData.metadata["licences"]
