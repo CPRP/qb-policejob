@@ -344,7 +344,7 @@ end)
 QBCore.Commands.Add("depot", Lang:t("commands.depot"), {{name = "price", help = Lang:t('info.impound_price')}}, false, function(source, args)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    if Player.PlayerData.job.name == "police" or PlayerData.job.name == "mechanic" and Player.PlayerData.job.onduty then
+    if Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty or PlayerData.job.name == "mechanic" and Player.PlayerData.job.onduty then
         TriggerClientEvent("police:client:ImpoundVehicle", src, false, tonumber(args[1]))
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
