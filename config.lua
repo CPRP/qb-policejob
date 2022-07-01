@@ -300,7 +300,6 @@ Config.Items = {
                 serie = "",
                 attachments = {
                     {component = "COMPONENT_AT_AR_FLSH", label = "Flashlight"},
-                    {component = "COMPONENT_AT_SCOPE_MEDIUM", label = "3x Scope"},
                 }
             },
             type = "weapon",
@@ -353,6 +352,15 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [11] = {
+            name = "sniper_ammo",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 10,
+            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
+        },
+        [12] = {
             name = "handcuffs",
             price = 0,
             amount = 1,
@@ -361,7 +369,7 @@ Config.Items = {
             slot = 11,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [12] = {
+        [13] = {
             name = "weapon_flashlight",
             price = 0,
             amount = 1,
@@ -370,7 +378,7 @@ Config.Items = {
             slot = 12,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [13] = {
+        [14] = {
             name = "empty_evidence_bag",
             price = 0,
             amount = 50,
@@ -379,7 +387,7 @@ Config.Items = {
             slot = 13,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [14] = {
+        [15] = {
             name = "police_stormram",
             price = 0,
             amount = 50,
@@ -388,7 +396,7 @@ Config.Items = {
             slot = 14,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [15] = {
+        [16] = {
             name = "armor",
             price = 0,
             amount = 50,
@@ -397,7 +405,7 @@ Config.Items = {
             slot = 15,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [16] = {
+        [17] = {
             name = "radio",
             price = 0,
             amount = 50,
@@ -406,7 +414,7 @@ Config.Items = {
             slot = 16,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [17] = {
+        [18] = {
             name = "heavyarmor",
             price = 0,
             amount = 50,
@@ -415,7 +423,7 @@ Config.Items = {
             slot = 17,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [18] = {
+        [19] = {
             name = "uvlight",
             price = 0,
             amount = 50,
@@ -424,7 +432,7 @@ Config.Items = {
             slot = 18,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [19] = {
+        [20] = {
             name = "weapon_glock17",
             price = 12,
             amount = 1,
@@ -437,7 +445,7 @@ Config.Items = {
             slot = 19,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [20] = {
+        [21] = {
             name = "weapon_m4",
             price = 12,
             amount = 1,
@@ -450,7 +458,7 @@ Config.Items = {
             slot = 20,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [21] = {
+        [22] = {
             name = "weapon_ar15",
             price = 12,
             amount = 1,
@@ -465,7 +473,7 @@ Config.Items = {
             slot = 21,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [22] = {
+        [23] = {
             name = "weapon_remington",
             price = 12,
             amount = 1,
@@ -478,7 +486,7 @@ Config.Items = {
             slot = 22,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [23] = {
+        [24] = {
             name = "weapon_scarh",
             price = 12,
             amount = 1,
@@ -491,7 +499,7 @@ Config.Items = {
             slot = 23,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
-        [24] = {
+        [25] = {
             name = "weapon_mk14",
             price = 12,
             amount = 1,
