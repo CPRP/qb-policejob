@@ -357,7 +357,7 @@ Config.Items = {
             amount = 5,
             info = {},
             type = "item",
-            slot = 10,
+            slot = 11,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [12] = {
@@ -366,7 +366,7 @@ Config.Items = {
             amount = 1,
             info = {},
             type = "item",
-            slot = 11,
+            slot = 12,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [13] = {
@@ -375,7 +375,7 @@ Config.Items = {
             amount = 1,
             info = {},
             type = "weapon",
-            slot = 12,
+            slot = 13,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [14] = {
@@ -384,7 +384,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 13,
+            slot = 14,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [15] = {
@@ -393,7 +393,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 14,
+            slot = 15,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [16] = {
@@ -402,7 +402,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 15,
+            slot = 16,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [17] = {
@@ -411,7 +411,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 16,
+            slot = 17,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [18] = {
@@ -420,7 +420,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 17,
+            slot = 18,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [19] = {
@@ -429,7 +429,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 18,
+            slot = 19,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [20] = {
@@ -442,7 +442,7 @@ Config.Items = {
                 }
             },
             type = "weapon",
-            slot = 19,
+            slot = 20,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [21] = {
@@ -455,7 +455,7 @@ Config.Items = {
                 }
             },
             type = "weapon",
-            slot = 20,
+            slot = 21,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [22] = {
@@ -470,7 +470,7 @@ Config.Items = {
                 }
             },
             type = "weapon",
-            slot = 21,
+            slot = 22,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [23] = {
@@ -483,7 +483,7 @@ Config.Items = {
                 }
             },
             type = "weapon",
-            slot = 22,
+            slot = 23,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [24] = {
@@ -496,7 +496,7 @@ Config.Items = {
                 }
             },
             type = "weapon",
-            slot = 23,
+            slot = 24,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [25] = {
@@ -509,7 +509,7 @@ Config.Items = {
                 }
             },
             type = "weapon",
-            slot = 24,
+            slot = 25,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
     }
