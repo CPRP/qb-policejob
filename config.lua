@@ -79,6 +79,8 @@ Config.Locations = {
         [3] = {label = "Paleto Bay Sheriffs Office", coords = vector4(-451.55, 6014.25, 31.716, 223.81)},
         [4] = {label = "Blaine County Sheriffs Office", coords = vector4(1853.94, 3685.59, 34.22, 206.54)},
         [5] = {label = "San Andreas Highway Patrol", coords = vector4(1538.23, 819.0, 77.66, 63.26)},
+        [6] = {label = "Davis Police Department", coords = vector4(381.15, -1593.35, 30.05, 320.64)},
+        [7] = {label = "La Mesa Police Department", coords = vector4(827.62, -1289.86, 28.23, 91.86)},
     },
 }
 
