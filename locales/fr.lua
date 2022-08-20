@@ -40,6 +40,7 @@ local Translations = {
         put_anklet_on = 'Vous avez mis un bracelet éléctronique sur %{firstname} %{lastname}.',
         vehicle_flagged = 'Vehicule %{plate} à été signalé pour %{reason}',
         impound_vehicle_removed = 'Le véhicule à été sortis de la fourrière!',
+        impounded = 'Vehicule mis en fourrière',
     },
     info = {
         mr = 'Mr.',
@@ -55,7 +56,7 @@ local Translations = {
         dna_sample = 'Echantillon ADN',
         jail_time_input = 'Temps que la personne doit passer en prison',
         jail_time_no = 'Le temps de prison doit être supérieur a 0',
-        license_type = 'Type de Permis (conduire/arme)',
+        license_type = 'Type de permis (driver/weapon)',
         ankle_location = 'Localisation du Bracelet éléctronique',
         cuff = 'Vous êtes menotté!',
         cuffed_walk = 'Vous êtes menotté, Mais vous pouvez marché',
@@ -117,7 +118,7 @@ local Translations = {
         wide_pupils = 'Pupilles dilatées',
         red_eyes = 'Yeux rouges',
         weed_smell = 'Sent la weed',
-        gunpowder = 'Poudre a cannon dans les vêtements',
+        gunpowder = 'Poudre à cannon sur les vêtements',
         chemicals = 'Sent les produits chimiques',
         heavy_breathing = 'Respire fortement',
         sweat = 'Transpire beaucoup',
@@ -139,7 +140,7 @@ local Translations = {
     email = {
         sender = 'Agence Centrale de Collection Judiciare',
         subject = 'Collection de dette',
-        message = 'Cher(e) %{value}. %{value2}, <br /><br />L\'Agence Centrale de Collection judiciaire (ACCJ) à facturé les amendes que vous avez reçu de la police.<br />Il y à <strong>$%{value3}</strong> qui ont été retiré de votre compte.<br /><br />Cordialement,<br />Mr. I.K. Graai',
+        message = 'Cher(e) %{value}. %{value2}, <br /><br />L\'Agence Centrale de Collection judiciaire (ACCJ) a facturé les amendes que vous avez reçu de la police.<br />Il y à <strong>$%{value3}</strong> qui ont été retiré de votre compte.<br /><br />Cordialement,<br />Mr. I.K. Graai',
     },
     commands = {
         place_spike = 'Poser une herse (Police Only)',
@@ -179,6 +180,7 @@ local Translations = {
         robbing = 'Dépouille la personne...',
         place_object = 'Place un objet..',
         remove_object = 'Retire un objet..',
+        impound = 'Met le véhicule en fourrière..',
     },
 }
 
