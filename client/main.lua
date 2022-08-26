@@ -218,3 +218,13 @@ CreateThread(function()
         EndTextCommandSetBlipName(blip)
     end
 end)
+
+-- Added for Police Apartment Raids
+exports("CanRaid", function()
+    local retval = false
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerJob.name == "police" and PlayerData.job.grade.level >= Config.RaidLevel and onDuty then
+        retval = true
+    end
+    return retval
+end)
