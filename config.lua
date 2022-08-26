@@ -14,6 +14,9 @@ Config.HandCuffItem = 'handcuffs'
 
 Config.LicenseRank = 2
 
+-- Added for Police Apartment Raids (just line 18)
+Config.RaidLevel = 4
+
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.Locations = {
     ["duty"] = {
