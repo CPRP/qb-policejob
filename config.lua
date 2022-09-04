@@ -20,10 +20,12 @@ Config.RaidLevel = 4
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.Locations = {
     ["duty"] = {
-        [1] = vector3(442.98, -982.0, 30.69),
-        [2] = vector3(-449.29, 6012.75, 31.72),
-        [3] = vector3(1852.18, 3688.11, 34.22),
-        [4] = vector3(1543.08, 816.58, 77.68),
+        [1] = vector3(442.98, -982.0, 30.69), --MRPD
+        [2] = vector3(-448.52, 6013.9, 32.29), --Paleto
+        [3] = vector3(1833.06, 3679.42, 34.19), --Sandy
+        [4] = vector3(1543.08, 816.58, 77.68), --SASP
+        [5] = vector3(837.12, -1288.59, 28.24), --LaMesa
+        [6] = vector3(382.49, -1596.93, 30.05), --Davis
     },
     ["vehicle"] = {
         [1] = vector4(0, 0, 0, 0),
@@ -32,58 +34,65 @@ Config.Locations = {
         [4] = vector4(0, 0, 0, 0),
     },
     ["stash"] = {
-        [1] = vector3(450.06, -997.68, 30.56),
-        [2] = vector3(1852.98, 3689.18, 29.82),
-        [3] = vector3(-440.32, 5996.78, 31.72),
-        [4] = vector3(1547.94, 827.47, 82.13),
+        [1] = vector3(450.06, -997.68, 30.56), --MRPD
+        [2] = vector3(1830.64, 3681.2, 38.87), --Sandy
+        [3] = vector3(-436.45, 6010.14, 37.0), --Pleto
+        [4] = vector3(1547.94, 827.47, 82.13), --SASP
+        [5] = vector3(856.31, -1294.63, 28.24),--LaMesa
+        [6] = vector3(370.72, -1591.57, 30.05), --Davis
     },
     ["impound"] = {
-        [1] = vector4(477.47, -1021.49, 28.03, 273.92),
-        [2] = vector4(-482.3, 6024.71, 31.34, 224.77),
-        [3] = vector4(1861.39, 3707.63, 33.34, 212.27),
-        [4] = vector4(1556.14, 816.12, 77.14, 195.67),
+        [1] = vector4(0, 0, 0, 0),
+        [2] = vector4(0, 0, 0, 0),
+        [3] = vector4(0, 0, 0, 0),
+        [4] = vector4(0, 0, 0, 0),
     },
     ["helicopter"] = {
-        [1] = vector4(449.168, -981.325, 43.691, 87.234),
-        [2] = vector4(-475.28, 5988.54, 31.34, 318.74),
-        [3] = vector4(1564.45, 844.15, 77.14, 64.14),
+        [1] = vector4(449.168, -981.325, 43.691, 87.234), --MRPD
+        [2] = vector4(-475.32, 5988.51, 31.34, 315.12), --Paleto
+        [3] = vector4(1564.45, 844.15, 77.14, 64.14), --SASP
+        [4] = vector4(1853.28, 3706.41, 33.97, 216.25), --Sandy
+        [5] = vector4(830.7, -1409.1, 28.23, 273.76), --LaMesa
     },
     ["armory"] = {
-        [1] = vector3(487.28, -997.07, 30.69),
-        [2] = vector3(1860.56, 3687.63, 34.22),
-        [3] = vector3(-437.44, 5988.66, 31.72),
-        [4] = vector3(1550.44, 841.94, 77.66),
+        [1] = vector3(487.28, -997.07, 30.69), --MRPD
+        [2] = vector3(1838.35, 3686.14, 34.19), --Sandy
+        [3] = vector3(-447.12, 6016.51, 37.0), --Paleto
+        [4] = vector3(1550.44, 841.94, 77.66), --SASP
+        [5] = vector3(836.39, -1286.3, 28.24), --LaMesa
+        [6] = vector3(362.35, -1603.07, 25.45), --Davis
     },
     ["trash"] = {
-        [1] = vector3(470.26, -988.6, 26.27),
-        [2] = vector3(1860.69, 3692.94, 34.22),
-        [3] = vector3(-440.27, 6007.13, 31.72),
-        [4] = vector3(1551.3, 822.35, 77.66),
+        [1] = vector3(470.26, -988.6, 26.27), --MRPD
+        [2] = vector3(1839.12, 3677.28, 34.19), --Sandy
+        [3] = vector3(-454.57, 6009.38, 27.58), --Paleto
+        [4] = vector3(1551.3, 822.35, 77.66), --SASP
+        [5] = vector3(858.42, -1307.18, 28.24), --LaMesa
+        [6] = vector3(376.21, -1609.98, 30.05), --Davis
     },
     ["fingerprint"] = {
-        [1] = vector3(474.66, -1013.4, 26.27),
-        [2] = vector3(1845.14, 3692.74, 34.22),
-        [3] = vector3(-432.42, 5997.39, 31.72),
-        [4] = vector3(1555.04, 835.06, 77.66),
+        [1] = vector3(474.66, -1013.4, 26.27), --MRPD
+        [2] = vector3(1818.6, 3666.55, 34.19), --Sandy
+        [3] = vector3(-452.58, 5998.05, 27.58), --Paleto
+        [4] = vector3(1555.04, 835.06, 77.66), --SASP
+        [5] = vector3(839.26, -1298.06, 28.24), --LaMesa
+        [6] = vector3(379.98, -1602.8, 25.45), --Davis
     },
     ["evidence"] = {
-        [1] = vector3(472.63, -993.84, 26.27),
-        [2] = vector3(474.5, -994.08, 26.27),
-        [3] = vector3(475.15, -996.45, 26.27),
-        [4] = vector3(1858.7, 3690.48, 29.82),
-        [5] = vector3(1856.23, 3691.1, 29.82),
-        [6] = vector3(-442.26, 5987.11, 31.72),
-        [7] = vector3(-442.4, 5988.83, 31.72),
-        [8] = vector3(1547.27, 836.52, 77.66),
-    },
-    ["stations"] = {
-        [1] = {label = "Los Santos Police Department", coords = vector4(428.23, -984.28, 29.76, 3.5)},
-        [2] = {label = "Prison", coords = vector4(1845.903, 2585.873, 45.672, 272.249)},
-        [3] = {label = "Paleto Bay Sheriffs Office", coords = vector4(-451.55, 6014.25, 31.716, 223.81)},
-        [4] = {label = "Blaine County Sheriffs Office", coords = vector4(1853.94, 3685.59, 34.22, 206.54)},
-        [5] = {label = "San Andreas Highway Patrol", coords = vector4(1538.23, 819.0, 77.66, 63.26)},
-        [6] = {label = "Davis Police Department", coords = vector4(381.15, -1593.35, 30.05, 320.64)},
-        [7] = {label = "La Mesa Police Department", coords = vector4(827.62, -1289.86, 28.23, 91.86)},
+        [1] = vector3(472.63, -993.84, 26.27), --MRPD
+        [2] = vector3(474.5, -994.08, 26.27), --MRPD
+        [3] = vector3(475.15, -996.45, 26.27), --MRPD
+        [4] = vector3(1831.55, 3680.16, 38.86), --Sandy
+        [5] = vector3(1830.02, 3679.37, 38.86), --Sandy
+        [6] = vector3(-452.1, 6000.35, 37.0), --Paleto
+        [7] = vector3(-453.37, 5999.08, 37.01), --Paleto
+        [8] = vector3(1547.27, 836.52, 77.66), --SASP
+        [9] = vector3(850.82, -1312.48, 28.24), --LaMesa
+        [10] = vector3(849.33, -1312.99, 28.24), --LaMesa
+        [11] = vector3(846.52, -1313.06, 28.24), --LaMesa
+        [12] = vector3(379.55, -1609.91, 30.2), --Davis
+        [13] = vector3(381.51, -1607.27, 30.2), --Davis
+        [14] = vector3(381.22, -1609.26, 30.2), --Davis
     },
 }
 
@@ -323,7 +332,7 @@ Config.Items = {
         [7] = {
             name = "pistol_ammo",
             price = 0,
-            amount = 5,
+            amount = 20,
             info = {},
             type = "item",
             slot = 7,
@@ -332,7 +341,7 @@ Config.Items = {
         [8] = {
             name = "smg_ammo",
             price = 0,
-            amount = 5,
+            amount = 20,
             info = {},
             type = "item",
             slot = 8,
@@ -341,7 +350,7 @@ Config.Items = {
         [9] = {
             name = "shotgun_ammo",
             price = 0,
-            amount = 5,
+            amount = 20,
             info = {},
             type = "item",
             slot = 9,
@@ -350,7 +359,7 @@ Config.Items = {
         [10] = {
             name = "rifle_ammo",
             price = 0,
-            amount = 5,
+            amount = 20,
             info = {},
             type = "item",
             slot = 10,
@@ -359,7 +368,7 @@ Config.Items = {
         [11] = {
             name = "snp_ammo",
             price = 0,
-            amount = 5,
+            amount = 20,
             info = {},
             type = "item",
             slot = 11,
@@ -404,7 +413,7 @@ Config.Items = {
         [16] = {
             name = "armor",
             price = 0,
-            amount = 50,
+            amount = 20,
             info = {},
             type = "item",
             slot = 16,
@@ -422,7 +431,7 @@ Config.Items = {
         [18] = {
             name = "heavyarmor",
             price = 0,
-            amount = 50,
+            amount = 20,
             info = {},
             type = "item",
             slot = 18,
@@ -431,7 +440,7 @@ Config.Items = {
         [19] = {
             name = "uvlight",
             price = 0,
-            amount = 50,
+            amount = 1,
             info = {},
             type = "item",
             slot = 19,
