@@ -448,7 +448,7 @@ Config.Items = {
         },
         [20] = {
             name = "weapon_glock17",
-            price = 12,
+            price = 0,
             amount = 1,
             info = {
                 attachments = {
@@ -461,7 +461,7 @@ Config.Items = {
         },
         [21] = {
             name = "weapon_m4",
-            price = 12,
+            price = 0,
             amount = 1,
             info = {
                 attachments = {
@@ -474,7 +474,7 @@ Config.Items = {
         },
         [22] = {
             name = "weapon_ar15",
-            price = 12,
+            price = 0,
             amount = 1,
             info = {
                 attachments = {
@@ -489,7 +489,7 @@ Config.Items = {
         },
         [23] = {
             name = "weapon_remington",
-            price = 12,
+            price = 0,
             amount = 1,
             info = {
                 attachments = {
@@ -502,7 +502,7 @@ Config.Items = {
         },
         [24] = {
             name = "weapon_scarh",
-            price = 12,
+            price = 0,
             amount = 1,
             info = {
                 attachments = {
@@ -515,7 +515,7 @@ Config.Items = {
         },
         [25] = {
             name = "weapon_mk14",
-            price = 12,
+            price = 0,
             amount = 1,
             info = {
                 attachments = {
@@ -526,8 +526,18 @@ Config.Items = {
             slot = 25,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
+        [26] = {
+            name = "tuner_laptop",
+            price = 0,
+            amount = 1,
+            info = {},
+            type = "item",
+            slot = 26,
+            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
+        },
     }
 }
+
 
 Config.VehicleSettings = {
     ["car1"] = { --- Model name
