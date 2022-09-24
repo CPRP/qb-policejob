@@ -107,7 +107,7 @@ Config.Locations = {
 
 Config.ArmoryWhitelist = {}
 
-Config.PoliceHelicopter = "POLMAV"
+Config.PoliceHelicopter = "as350"
 
 Config.SecurityCameras = {
     hideradar = false,
