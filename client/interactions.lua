@@ -300,23 +300,23 @@ RegisterNetEvent('police:client:CuffPlayer', function()
     end
 end)
 
-RegisterNetEvent('police:client:GetEscorted', function(playerId)
-    local ped = PlayerPedId()
-    QBCore.Functions.GetPlayerData(function(PlayerData)
-        if PlayerData.metadata["isdead"] or isHandcuffed or PlayerData.metadata["inlaststand"] then
-            if not isEscorted then
-                isEscorted = true
-                local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))
-                SetEntityCoords(ped, GetOffsetFromEntityInWorldCoords(dragger, 0.0, 0.45, 0.0))
-                AttachEntityToEntity(ped, dragger, 11816, 0.45, 0.45, 0.0, 0.0, 0.0, 0.0, false, false, false, false, 2, true)
-            else
-                isEscorted = false
-                DetachEntity(ped, true, false)
-            end
-            TriggerEvent('hospital:client:isEscorted', isEscorted)
-        end
-    end)
-end)
+-- RegisterNetEvent('police:client:GetEscorted', function(playerId)
+--     local ped = PlayerPedId()
+--     QBCore.Functions.GetPlayerData(function(PlayerData)
+--         if PlayerData.metadata["isdead"] or isHandcuffed or PlayerData.metadata["inlaststand"] then
+--             if not isEscorted then
+--                 isEscorted = true
+--                 local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))
+--                 SetEntityCoords(ped, GetOffsetFromEntityInWorldCoords(dragger, 0.0, 0.45, 0.0))
+--                 AttachEntityToEntity(ped, dragger, 11816, 0.45, 0.45, 0.0, 0.0, 0.0, 0.0, false, false, false, false, 2, true)
+--             else
+--                 isEscorted = false
+--                 DetachEntity(ped, true, false)
+--             end
+--             TriggerEvent('hospital:client:isEscorted', isEscorted)
+--         end
+--     end)
+-- end)
 
 RegisterNetEvent('police:client:DeEscort', function()
     isEscorted = false
@@ -433,6 +433,24 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff)
         ClearPedTasksImmediately(PlayerPedId())
         QBCore.Functions.Notify("You are uncuffed!")
     end
+end)
+
+RegisterNetEvent('police:client:GetEscorted', function(playerId)
+    local ped = PlayerPedId()
+    QBCore.Functions.GetPlayerData(function(PlayerData)
+        if PlayerData.metadata["isdead"] or isHandcuffed or PlayerData.metadata["inlaststand"] or PlayerData.metadata['ishandcuffed'] then
+            if not isEscorted then
+                isEscorted = true
+                local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))
+                SetEntityCoords(ped, GetOffsetFromEntityInWorldCoords(dragger, 0.0, 0.45, 0.0))
+                AttachEntityToEntity(ped, dragger, 11816, 0.45, 0.45, 0.0, 0.0, 0.0, 0.0, false, false, false, false, 2, true)
+            else
+                isEscorted = false
+                DetachEntity(ped, true, false)
+            end
+            TriggerEvent('hospital:client:isEscorted', isEscorted)
+        end
+    end)
 end)
 
 -- Threads
