@@ -20,12 +20,12 @@ Config.RaidLevel = 4
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.Locations = {
     ["duty"] = {
-        [1] = vector3(442.98, -982.0, 30.69), --MRPD
-        [2] = vector3(-448.52, 6013.9, 32.29), --Paleto
-        [3] = vector3(1833.06, 3679.42, 34.19), --Sandy
-        [4] = vector3(1543.08, 816.58, 77.68), --SASP
-        [5] = vector3(837.12, -1288.59, 28.24), --LaMesa
-        [6] = vector3(382.49, -1596.93, 30.05), --Davis
+        -- [1] = vector3(442.98, -982.0, 30.69), --MRPD
+        [1] = vector3(-448.52, 6013.9, 32.29), --Paleto
+        [2] = vector3(1833.06, 3679.42, 34.19), --Sandy
+        [3] = vector3(1543.08, 816.58, 77.68), --SASP
+        [4] = vector3(837.12, -1288.59, 28.24), --LaMesa
+        [5] = vector3(382.49, -1596.93, 30.05), --Davis
     },
     ["vehicle"] = {
         [1] = vector4(0, 0, 0, 0),
