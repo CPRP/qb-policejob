@@ -187,15 +187,15 @@ QBCore.Commands.Add("pobject", Lang:t("commands.place_object"), {{name = "type",
     end
 end)
 
-QBCore.Commands.Add("cuff", Lang:t("commands.cuff_player"), {}, false, function(source)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    if Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty then
-        TriggerClientEvent("police:client:CuffPlayer", src)
-    else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
-    end
-end)
+-- QBCore.Commands.Add("cuff", Lang:t("commands.cuff_player"), {}, false, function(source)
+--     local src = source
+--     local Player = QBCore.Functions.GetPlayer(src)
+--     if Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty then
+--         TriggerClientEvent("police:client:CuffPlayer", src)
+--     else
+--         TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+--     end
+-- end)
 
 QBCore.Commands.Add("escort", Lang:t("commands.escort"), {}, false, function(source)
     local src = source
