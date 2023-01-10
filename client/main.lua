@@ -79,6 +79,23 @@ AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     end
 end)
 
+-- [[Checks for warrants]] https://discord.com/channels/897744257237000222/1060363334714662962/1060553757282279585
+RegisterNetEvent('checkwarrant', function()
+    local playerId = GetPlayerServerId(PlayerId())
+    QBCore.Functions.TriggerCallback('qb-policejob:server:GetPlayerWarrants', function(iswanted, reason)
+        if iswanted then
+            -- print("test")
+            --exports['okokChatV2']:Message('linear-gradient(90deg, rgba(42, 42, 42, 0.9) 0%, rgba(53, 219, 194, 0.9) 100%)', '#35dbc2', 'fas fa-briefcase', 'Warrant Information', '', 'You have an active warrant!', playerId)
+            TriggerEvent("chatMessage", "Warrant Information", "warning", "You currently have an active warrant for your arrest regarding "..reason)
+
+        else
+            -- print("none")
+            --exports['okokChatV2']:Message('linear-gradient(90deg, rgba(42, 42, 42, 0.9) 0%, rgba(53, 219, 194, 0.9) 100%)', '#35dbc2', 'fas fa-briefcase', 'Warrant Information', '', 'You do not have any active warrants!', playerId)        
+            TriggerEvent("chatMessage", "Warrant Information", "warning", "You do not have any active warrants")
+        end
+     end)
+end)
+
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
     TriggerServerEvent('police:server:UpdateBlips')
     TriggerServerEvent("police:server:SetHandcuffStatus", false)
