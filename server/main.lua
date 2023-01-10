@@ -522,6 +522,29 @@ QBCore.Functions.CreateUseableItem("moneybag", function(source, item)
 end)
 
 -- Callbacks
+
+-- [[Checks for warrants]] https://discord.com/channels/897744257237000222/1060363334714662962/1060553757282279585
+QBCore.Functions.CreateCallback('qb-policejob:server:GetPlayerWarrants', function(source, cb)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local cid = Player.PlayerData.citizenid
+    local name = Player.PlayerData.charinfo.firstname..' '..Player.PlayerData.charinfo.lastname 
+    local iswanted = false
+    local result = MySQL.query.await('SELECT warrant FROM mdt_convictions WHERE cid = ?', {cid})
+    local reason = MySQL.query.await('SELECT charges FROM mdt_convictions WHERE cid = ?', {cid})
+    for k,v in pairs(result) do
+        -- print(result[k].warrant)
+        -- print(reason[k].charges)
+    if result[k].warrant == '1' then
+        iswanted = true
+        reason = reason[k].charges
+    else
+        iswanted = false
+    end
+end
+    cb(iswanted, reason)
+end)
+
 QBCore.Functions.CreateCallback('police:server:isPlayerDead', function(_, cb, playerId)
     local Player = QBCore.Functions.GetPlayer(playerId)
     cb(Player.PlayerData.metadata["isdead"])
