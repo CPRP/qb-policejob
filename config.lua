@@ -383,7 +383,7 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33}
         },
         [14] = {
-            name = "weapon_stungun",
+            name = "weapon_taser",
             price = 0,
             amount = 1,
             info = {
@@ -564,7 +564,7 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33}
         },
         [28] = {
-            name = "smg_ammo",
+            name = "stungun_ammo",
             price = 0,
             amount = 20,
             info = {},
@@ -573,7 +573,7 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33}
         },
         [29] = {
-            name = "shotgun_ammo",
+            name = "smg_ammo",
             price = 0,
             amount = 20,
             info = {},
@@ -582,7 +582,7 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33}
         },
         [30] = {
-            name = "rifle_ammo",
+            name = "shotgun_ammo",
             price = 0,
             amount = 20,
             info = {},
@@ -591,12 +591,21 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33}
         },
         [31] = {
-            name = "snp_ammo",
+            name = "rifle_ammo",
             price = 0,
             amount = 20,
             info = {},
             type = "item",
             slot = 31,
+            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33}
+        },
+        [32] = {
+            name = "snp_ammo",
+            price = 0,
+            amount = 20,
+            info = {},
+            type = "item",
+            slot = 32,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33}
         },
     }
