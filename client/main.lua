@@ -7,26 +7,24 @@ PlayerJob = {}
 local DutyBlips = {}
 
 -- Functions
-local DutyBlips = {}
-
-local function CreateDutyBlips(playerId, playerLabel, playerJob,blipNum,blipSize,blipColorNum,playerLocation)
+local function CreateDutyBlips(playerId, playerLabel, playerJob, playerLocation)
     local ped = GetPlayerPed(playerId)
     local blip = GetBlipFromEntity(ped)
-    local pedVehicle = GetVehiclePedIsIn( ped, false);
     if not DoesBlipExist(blip) then
         if NetworkIsPlayerActive(playerId) then
             blip = AddBlipForEntity(ped)
         else
             blip = AddBlipForCoord(playerLocation.x, playerLocation.y, playerLocation.z)
         end
-            SetBlipScale(blip, blipSize)
-            SetBlipSprite(blip, blipNum)
-            ShowHeadingIndicatorOnBlip(blip, true)
-            SetBlipRotation(blip, math.ceil(playerLocation.w))
-       
-        SetBlipColour(blip, blipColorNum)
-
-        
+        SetBlipSprite(blip, 1)
+        ShowHeadingIndicatorOnBlip(blip, true)
+        SetBlipRotation(blip, math.ceil(playerLocation.w))
+        SetBlipScale(blip, 1.0)
+        if playerJob == "police" then
+            SetBlipColour(blip, 38)
+        else
+            SetBlipColour(blip, 5)
+        end
         SetBlipAsShortRange(blip, true)
         BeginTextCommandSetBlipName('STRING')
         AddTextComponentString(playerLabel)
@@ -71,7 +69,7 @@ AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
         TriggerEvent('qb-clothing:client:loadOutfit', trackerClothingData)
     end
 
-    if PlayerJob and PlayerJob.type ~= "leo" then
+    if PlayerJob and PlayerJob.name ~= "police" then
         if DutyBlips then
             for _, v in pairs(DutyBlips) do
                 RemoveBlip(v)
@@ -79,6 +77,23 @@ AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
         end
         DutyBlips = {}
     end
+end)
+
+-- [[Checks for warrants]] https://discord.com/channels/897744257237000222/1060363334714662962/1060553757282279585
+RegisterNetEvent('checkwarrant', function()
+    local playerId = GetPlayerServerId(PlayerId())
+    QBCore.Functions.TriggerCallback('qb-policejob:server:GetPlayerWarrants', function(iswanted, reason)
+        if iswanted then
+            -- print("test")
+            --exports['okokChatV2']:Message('linear-gradient(90deg, rgba(42, 42, 42, 0.9) 0%, rgba(53, 219, 194, 0.9) 100%)', '#35dbc2', 'fas fa-briefcase', 'Warrant Information', '', 'You have an active warrant!', playerId)
+            TriggerEvent("chatMessage", "Warrant Information", "warning", "You currently have an active warrant for your arrest regarding "..reason)
+
+        else
+            -- print("none")
+            --exports['okokChatV2']:Message('linear-gradient(90deg, rgba(42, 42, 42, 0.9) 0%, rgba(53, 219, 194, 0.9) 100%)', '#35dbc2', 'fas fa-briefcase', 'Warrant Information', '', 'You do not have any active warrants!', playerId)        
+            TriggerEvent("chatMessage", "Warrant Information", "warning", "You do not have any active warrants")
+        end
+     end)
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
@@ -115,7 +130,6 @@ RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
     TriggerServerEvent("police:server:UpdateBlips")
 end)
 
-
 RegisterNetEvent('police:client:sendBillingMail', function(amount)
     SetTimeout(math.random(2500, 4000), function()
         local gender = Lang:t('info.mr')
@@ -133,7 +147,8 @@ RegisterNetEvent('police:client:sendBillingMail', function(amount)
 end)
 
 RegisterNetEvent('police:client:UpdateBlips', function(players)
-    if PlayerJob and (PlayerJob.name == 'police' or PlayerJob.name == 'ambulance' or PlayerJob.name == 'bcso' or PlayerJob.name == 'sasp' or PlayerJob.name == 'sapr') and PlayerJob.onduty then 
+    if PlayerJob and (PlayerJob.name == 'police' or PlayerJob.name == 'ambulance') and
+        PlayerJob.onduty then
         if DutyBlips then
             for _, v in pairs(DutyBlips) do
                 RemoveBlip(v)
@@ -143,7 +158,8 @@ RegisterNetEvent('police:client:UpdateBlips', function(players)
         if players then
             for _, data in pairs(players) do
                 local id = GetPlayerFromServerId(data.source)
-                CreateDutyBlips(id, data.label, data.job, data.blipNum, data.blipSize, data.blipColorNum, data.location)
+                CreateDutyBlips(id, data.label, data.job, data.location)
+
             end
         end
     end
@@ -215,19 +231,12 @@ CreateThread(function()
     end
 end)
 
--- [[Checks for warrants]] https://discord.com/channels/897744257237000222/1060363334714662962/1060553757282279585
-RegisterNetEvent('checkwarrant', function()
-    local playerId = GetPlayerServerId(PlayerId())
-    QBCore.Functions.TriggerCallback('qb-policejob:server:GetPlayerWarrants', function(iswanted, reason)
-        if iswanted then
-            -- print("test")
-            --exports['okokChatV2']:Message('linear-gradient(90deg, rgba(42, 42, 42, 0.9) 0%, rgba(53, 219, 194, 0.9) 100%)', '#35dbc2', 'fas fa-briefcase', 'Warrant Information', '', 'You have an active warrant!', playerId)
-            TriggerEvent("chatMessage", "Warrant Information", "warning", "You currently have an active warrant for your arrest regarding "..reason)
-
-        else
-            -- print("none")
-            --exports['okokChatV2']:Message('linear-gradient(90deg, rgba(42, 42, 42, 0.9) 0%, rgba(53, 219, 194, 0.9) 100%)', '#35dbc2', 'fas fa-briefcase', 'Warrant Information', '', 'You do not have any active warrants!', playerId)        
-            TriggerEvent("chatMessage", "Warrant Information", "warning", "You do not have any active warrants")
-        end
-     end)
+-- Added for Police Apartment Raids
+exports("CanRaid", function()
+    local retval = false
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerJob.name == "police" and PlayerData.job.grade.level >= Config.RaidLevel and onDuty then
+        retval = true
+    end
+    return retval
 end)
